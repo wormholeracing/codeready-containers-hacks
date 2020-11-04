@@ -1,7 +1,7 @@
-- name: Copying over pull-secert.txt
+- name: Copying over pull-secret.txt
   template:
     src: templates/pull-secret.txt.j2
-    dest:  "{{ pull_secert_path }}"
+    dest:  "{{ pull_secret_path }}"
     owner: admin
     group: admin
     mode: 0666
@@ -33,6 +33,6 @@
 - name: Start CodeReady Deployment
   shell: |
     set -o pipefail
-    crc start -p {{ pull_secert_path }} --log-level {{ log_level }} | tee /tmp/install_status.log
+    crc start -p {{ pull_secret_path }} --log-level {{ log_level }} | tee /tmp/install_status.log
   tags:
   - start_crc_deployment

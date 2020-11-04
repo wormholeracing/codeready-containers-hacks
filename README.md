@@ -11,7 +11,7 @@ Requirements
 *  Ansible 
 *  Fedora or RHEL 
 * IF using RHEL make sure it is registered
-* OpenShift CodeReady WorkSpaces  pull secert 
+* OpenShift CodeReady WorkSpaces  pull secret 
   * https://cloud.redhat.com/openshift/install/crc/installer-provisioned
 
 **GET SHA** 
@@ -38,8 +38,8 @@ crc_version  | Target CRC version  | 1.10.0
 crc_sha      | SHA informaqtion of the crc-linux-amd64.tar.xz file | 97aa185f6ff88560611f81fbf5991cfced814e8d9ac796947c7bef6374ee7af3
 crc_url      |  CRC download URL | https://mirror.openshift.com/pub/openshift-v4/clients/crc/
 crc_file_name  | CRC filename  | crc-linux-amd64.tar.xz
-pull_secert_path | default path of pull secert | /tmp/pull-secert.txt
-pull_secert_content: | pull secert content     |  changeme
+pull_secret_path | default path of pull secret | /tmp/pull-secret.txt
+pull_secret_content: | pull secret content     |  changeme
 use_all_in_one_haproxy | Use current machine as haproxy LB | true
 haproxy_ip             | Set ha proxy ip if above is set to flase **NOT TESTED**| ""
 use_all_in_one_dnsmasq | Use current machine as dnsmasq server | true
@@ -73,8 +73,8 @@ Including an example of how to use your role (for instance, with variables passe
   vars:
     crc_version: 1.10.0
     crc_sha: 97aa185f6ff88560611f81fbf5991cfced814e8d9ac796947c7bef6374ee7af3
-    pull_secert_path: /tmp/pull-secert.txt
-    pull_secert_content: |
+    pull_secret_path: /tmp/pull-secret.txt
+    pull_secret_content: |
       changeme
     use_all_in_one_haproxy: true
     haproxy_ip: ""
